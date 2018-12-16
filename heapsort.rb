@@ -4,7 +4,7 @@ p "HeapSort!"
 # Meaning Parent Node is Greater Than Children Nodes.
 # Params: an array, i: index of parent node, n: size of array.
 
-def max_heap array, i, n
+def heapify array, i, n
 	# Assume i is the index that belongs to largest number.
 	largest = i
 
@@ -28,9 +28,12 @@ def max_heap array, i, n
 
 	# Swap elements in array if parent was not largest element
 	if largest != i
+
 		# Swap elements in array
 		swap(array, largest, i)
 
+		# Recursively call function as long as largest is not parent
+		heapify(array, largest, n)
 	end	
 
 
