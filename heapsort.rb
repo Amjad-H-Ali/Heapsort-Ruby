@@ -58,3 +58,17 @@ def heap_sort array
 	# Calls heapify for each parent node backwards
 	(n/2 -1).downto(0) {|indx| heapify(array, indx, n)}
 
+	# Once in Max-Heap, swap root with last node
+	# Then disregard last node,
+	# And Heapify the affected array.
+
+	(n - 1).downto(0) {
+		|indx| swap(array, indx, 0)
+
+		heapify(array, 0, indx)
+	}
+
+	# Return array
+	array 
+end	
+
