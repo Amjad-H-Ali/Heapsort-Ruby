@@ -72,3 +72,5 @@ def heap_sort array
 	array 
 end	
 
+p heap_sort [10, 0, 8, 42, 12, 11, 9, 67, 4, 0]
+
