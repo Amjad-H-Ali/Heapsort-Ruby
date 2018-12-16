@@ -15,10 +15,16 @@ def max_heap array, i, n
 	right = (i * 2) + 2
 
 	# Check if left child node is greater and swap as needed.
-	if array[left] > array[i]
+	if left < n and array[left] > array[largest]
 
-		# Swap elements in array.
-		swap(array, left, i)
-		
+		largest = left
+	end	
+
+	# Check if right child node is greater and swap as needed.
+	if right < n and array[right] > array[largest]
+
+		largest = right
+	end	
+
 
 end
