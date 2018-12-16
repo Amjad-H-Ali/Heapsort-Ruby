@@ -36,6 +36,13 @@ def heapify array, i, n
 		heapify(array, largest, n)
 	end	
 
-
-
 end
+
+# Function that swaps elements in array
+def swap array, indx1, indx2
+	temp = array[indx1]
+
+	array[indx1] = array[indx2]
+
+	array[indx2] = temp
+end	
