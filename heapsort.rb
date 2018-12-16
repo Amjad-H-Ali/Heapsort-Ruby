@@ -46,3 +46,15 @@ def swap array, indx1, indx2
 
 	array[indx2] = temp
 end	
+
+# Main Heap_Sort function.
+# It will call heapify for each parent node
+# Once array in Max-Heap, it will swap last node with root node, delete last noden then heapify affected array
+
+def heap_sort array
+
+	n = array.length
+
+	# Calls heapify for each parent node backwards
+	(n/2 -1).downto(0) {|indx| heapify(array, indx, n)}
+
